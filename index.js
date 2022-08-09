@@ -180,10 +180,27 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
+let computersChoice = () => {
+  const computerOptions =  ["rock", "paper", "scissors"]
+  let randomnumber = Math.round(Math.random()*3)
+  console.log (computerOptions[randomnumber])
+  
+}
+
+
 
 function game(user, computer){
-  /*add your code here*/
+  if (user === computer) {
+    return "it's a tie"
+  } else if ((user === "scissors" && computer === "paper") || (user === "paper" && computer === "rock") || (user === "rock" && computer === "scissors")) {
+    return "you win!";
+  } else if (user === "scissors" && computer === "rock"|| (user === "paper" && computer === "scissors") || (user === "rock" && computer === "paper") ) {
+    return "you lose!";
+  }
+  
 }
+
+
 
 
 
